@@ -302,89 +302,73 @@ body {
 .download h2 { color: white; }
 .download .section-subtitle { color: rgba(255,255,255,0.75); margin-bottom: 40px; }
 
-/* ── Home blog teaser ─────────────────── */
+/* ── Home blog banner ─────────────────── */
 .home-blog {
-    padding: 80px 0;
+    padding: 0 0 72px;
     background: white;
 }
 
-.home-blog h2 {
-    text-align: center;
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: var(--text-dark);
-    margin-bottom: 12px;
-}
-
-.home-blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    margin-top: 8px;
-}
-
-.home-blog-card {
-    display: block;
+.home-blog-banner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 20px 24px;
     text-decoration: none;
     background: var(--bg-light);
-    border: 1px solid rgba(44, 125, 160, 0.12);
-    border-radius: 18px;
-    padding: 24px 26px;
-    transition: all 0.25s ease;
+    border: 1px solid rgba(44, 125, 160, 0.14);
+    border-radius: 16px;
     box-shadow: var(--shadow-sm);
+    transition: all 0.25s ease;
 }
 
-.home-blog-card:hover {
-    transform: translateY(-4px);
+.home-blog-banner:hover {
+    transform: translateY(-2px);
     box-shadow: var(--shadow-md);
-    border-color: rgba(44, 125, 160, 0.25);
+    border-color: rgba(44, 125, 160, 0.28);
     background: #e8f0f6;
 }
 
-.home-blog-tag {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #5a7d92;
-    background: rgba(255, 255, 255, 0.7);
-    border: 1px solid rgba(44, 125, 160, 0.14);
-    padding: 4px 10px;
-    border-radius: 50px;
-    margin-bottom: 12px;
+.home-blog-banner-icon {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    opacity: 0.7;
 }
 
-.home-blog-card h3 {
-    font-size: 1.08rem;
+.home-blog-banner-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.home-blog-banner-text strong {
+    font-size: 1.02rem;
     font-weight: 700;
     color: #3a4d61;
-    margin-bottom: 8px;
-    line-height: 1.35;
 }
 
-.home-blog-card p {
-    font-size: 0.92rem;
+.home-blog-banner-text span {
+    font-size: 0.88rem;
     color: #7b8a9a;
-    line-height: 1.6;
-    margin: 0;
+    line-height: 1.45;
 }
 
-.home-blog-all {
-    text-align: center;
-    margin-top: 28px;
-}
-
-.home-blog-all a {
-    color: var(--primary);
+.home-blog-banner-arrow {
+    flex-shrink: 0;
+    font-size: 1.2rem;
     font-weight: 600;
-    text-decoration: none;
-    font-size: 0.95rem;
+    color: var(--primary);
+    opacity: 0.85;
+    transition: transform 0.2s ease;
 }
 
-.home-blog-all a:hover {
-    color: var(--primary-dark);
-    text-decoration: underline;
+.home-blog-banner:hover .home-blog-banner-arrow {
+    transform: translateX(4px);
+    opacity: 1;
 }
 
 .download-buttons {
@@ -426,7 +410,9 @@ footer a:hover { opacity: 0.8; text-decoration: underline; }
     .feature-graphic-wrap { max-height: 220px; }
     .feature-graphic { max-height: 220px; }
 
-    .features, .how, .download, .home-blog { padding: 60px 0; }
+    .features, .how, .download { padding: 60px 0; }
+    .home-blog { padding: 0 0 48px; }
+    .home-blog-banner { padding: 18px 20px; gap: 14px; }
     .features h2, .how h2, .download h2 { font-size: 1.8rem; }
     .features-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr; gap: 28px; }
