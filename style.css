@@ -444,7 +444,8 @@ footer a:hover { opacity: 0.8; text-decoration: underline; }
     margin-bottom: 0.85rem;
 }
 
-.legal-card ul {
+.legal-card ul,
+.legal-card ol {
     color: var(--text-light);
     padding-left: 1.35rem;
     margin-bottom: 0.85rem;
@@ -473,32 +474,94 @@ footer a:hover { opacity: 0.8; text-decoration: underline; }
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
 }
 
 .post-card {
+    position: relative;
     background: white;
-    border-radius: 18px;
-    padding: 28px 32px;
-    box-shadow: var(--shadow-sm);
-    border-top: 3px solid var(--primary-light);
+    border-radius: 20px;
+    padding: 28px 32px 28px 36px;
     text-decoration: none;
     display: block;
-    transition: all 0.25s ease;
+    transition: all 0.28s ease;
+    border: 1px solid rgba(44, 125, 160, 0.18);
+    box-shadow:
+        var(--shadow-sm),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+}
+
+.post-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: var(--gradient-btn);
+    border-radius: 20px 0 0 20px;
+}
+
+.post-card::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(108, 99, 255, 0.08) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .post-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    border-top-color: var(--accent);
+    transform: translateY(-5px);
+    border-color: rgba(44, 125, 160, 0.35);
+    box-shadow:
+        var(--shadow-lg),
+        0 0 0 1px rgba(44, 125, 160, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.post-card:hover::before {
+    width: 6px;
+    background: linear-gradient(180deg, var(--accent) 0%, var(--primary) 100%);
+}
+
+.post-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.post-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--primary-dark);
+    background: rgba(44, 125, 160, 0.1);
+    border: 1px solid rgba(44, 125, 160, 0.2);
+    padding: 5px 12px;
+    border-radius: 50px;
+}
+
+.post-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    opacity: 0.85;
 }
 
 .post-card h2 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-dark);
     margin: 0 0 10px;
     line-height: 1.35;
+    padding-right: 8px;
 }
 
 .post-card p {
@@ -508,15 +571,28 @@ footer a:hover { opacity: 0.8; text-decoration: underline; }
     margin: 0;
 }
 
+.post-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(44, 125, 160, 0.2);
+}
+
 .post-card .read-more {
-    display: inline-block;
-    margin-top: 14px;
     font-size: 0.88rem;
     font-weight: 600;
     color: var(--primary);
 }
 
 .post-card:hover .read-more { color: var(--primary-dark); }
+
+.post-card-time {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    opacity: 0.75;
+}
 
 .article-card h1 {
     font-size: 1.55rem;
