@@ -25,8 +25,6 @@
 | ⬜ | как уложить ребёнка спать | `kak-ulozhit-rebenka-spat` | Как уложить ребёнка спать: пошагово |
 | ⬜ | нормы сна малыша / сколько спит | `skolko-spit-novorozhdennyj` | Сколько должен спать новорождённый: таблица по неделям |
 | ⬜ | окно бодрствования | `okno-bodrstvovaniya` | Окно бодрствования: что это и как не переутомить |
-| ⬜ | ~~регресс сна 4 месяца~~ | ~~`regress-sna-4-mesyaca`~~ | → см. `regress-sna` |
-| ⬜ | ~~регресс 8 / 12~~ | ~~`regress-sna-8-12-mesyacev`~~ | → см. `regress-sna` |
 | ⬜ | ребёнок встаёт в 5 утра | `rebenok-vstaet-v-5-utra` | Ребёнок встаёт в 5 утра — как сдвинуть подъём |
 | ⬜ | ребёнок просыпается каждые 40 минут | `rebenok-prosypaetsya-chasto` | Ребёнок просыпается каждые 40 минут — почему |
 | ⬜ | когда убирать второй / третий сон | `kogda-ubrat-dnevnoj-son` | Когда убирать второй дневной сон |
@@ -41,7 +39,7 @@
 | ⬜ | приложение для сна малыша | `prilozhenie-dlya-sna-malysha` | Приложение для сна малыша: на что смотреть при выборе |
 
 **Порядок публикации (рекомендация):**  
-✅ 1–3 → 4 `kak-ulozhit` → 5 `okno-bodrstvovaniya` → 6 `regress-sna-4` → 7 `rebenok-vstaet-v-5` → 8 `dnevnik-sna` → 9 `skolko-spit-novorozhdennyj` → остальные по сезону (зубы, регрессы).
+✅ 1–4 → 5 `kak-ulozhit` → 6 `okno-bodrstvovaniya` → 7 `rebenok-vstaet-v-5` → 8 `dnevnik-sna` → 9 `skolko-spit-novorozhdennyj` → остальные по сезону (зубы и т.д.).
 
 ---
 
